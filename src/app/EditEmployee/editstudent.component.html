@@ -1,0 +1,57 @@
+<div class="container">
+  <h2 class="border border-4 font"> EDIT STUDENT LIST</h2>
+
+  <form class="col-md-4" [formGroup]="updateform" (ngSubmit)="updateStudent()">
+
+    <div>
+      <div class="mb-3">
+        <label class="form-label" for="rollno">Roll Number:</label>
+        <input class="form-control" type="number" id="rollno" formControlName="rollno" />
+        <div *ngIf="updateform.get('rollno')?.invalid && updateform.get('rollno')?.touched">
+          <small *ngIf="updateform.get('rollno')?.hasError('required')">Roll number is required.</small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="name">Name:</label>
+        <input class="form-control" type="text" id="name" formControlName="name" />
+        <div *ngIf="updateform.get('name')?.invalid && updateform.get('name')?.touched">
+          <small *ngIf="updateform.get('name')?.hasError('required')">Name is required.</small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="education_Qualification">Education Qualification:</label>
+        <input class="form-control" type="text" id="education_Qualification"
+          formControlName="education_Qualification" />
+        <div
+          *ngIf="updateform.get('education_Qualification')?.invalid && updateform.get('education_Qualification')?.touched">
+          <small *ngIf="updateform.get('education_Qualification')?.hasError('required')">Education qualification is
+            required.</small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label class="form-label" for="age">Age:</label>
+        <input class="form-control" type="number" id="age" formControlName="age" />
+        <div *ngIf="updateform.get('age')?.invalid && updateform.get('age')?.touched">
+          <small *ngIf="updateform.get('age')?.hasError('required')">Age is required.</small>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <button class="btn btn-info" type="submit">Update Student</button>
+        <button class="btn btn-secondary" [routerLink]="['/edit']">View</button>
+        <button class="btn" type="button" (click)="cancelEdit() ">Cancel</button>
+
+      </div>
+    </div>
+
+  </form>
+
+  <div class="alert alert-success" role="alert" *ngIf="successMessage">
+    {{successMessage}}
+  </div>
+</div>

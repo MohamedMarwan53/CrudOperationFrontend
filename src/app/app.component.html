@@ -1,0 +1,45 @@
+
+<!-- <div class="margin">
+    <div class="image ">
+    
+<h2 class="h2fontstyle text">Welcome To Student Portal</h2>
+<div><button class="btn btn-secondary container"[routerLink]="['/student']">Signup</button>
+</div>
+<div><button class="btn btn-primary container2" [routerLink]="['/edit']">Student Details</button>
+</div>
+</div>
+</div>
+
+<div class="message" *ngIf="isCurrentRouteHome()">
+    <h2>Welcome</h2>
+    </div>
+
+<router-outlet></router-outlet> -->
+
+<div class="row">
+    <div class="col">
+        <div class="margin image">
+            <h2 class="h2fontstyle text">Welcome To Student Portal</h2>
+<button class="btn btn-secondary col-md-1 button"[routerLink]="['/student']">Signup</button>
+
+<div><button class="btn btn-primary col-lg-1 button1" [routerLink]="['/edit']">Student Details</button>
+</div>
+
+        </div>
+
+    </div>
+</div>
+<div  >
+    <div class="row" *ngIf="isCurrentRouteHome()">
+        <div class="col">
+            <div class="header">
+            </div>
+                    <div>
+                
+            </div>
+        
+
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

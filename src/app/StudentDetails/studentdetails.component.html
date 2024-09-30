@@ -1,0 +1,38 @@
+<div class="col-md-12">
+  
+  <div class="container">
+  <h3 class="font border border-4">STUDENT LIST</h3>
+
+  <table class="table table-striped table-hover"> 
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Education Qualification</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.rollno }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.education_Qualification }}</td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Action
+            </button>
+            <ul class="dropdown-menu">
+              <button class="dropdown-item" (click)="editStudent(student.id)">Edit</button>
+              <button class="dropdown-item" (click)="deleteStudent(student.id)">Delete</button>
+              <button class="dropdown-item" (click)="employee(student.id)">Student Detail</button>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

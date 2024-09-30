@@ -1,0 +1,28 @@
+<div>
+
+<div class="container">
+<h3 class="border border-4 font">STUDENT DATA</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="rfont">Roll No</th>
+      <th class="rfont">Name</th>
+      <th class="rfont">Age</th>
+      <th class="rfont">Education Qualification</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr *ngIf="student">
+      <td class="rfont">{{ student.rollno }}</td>
+      <td class="rfont">{{ student.name }}</td>
+      <td class="rfont">{{ student.age }}</td>
+      <td class="rfont">{{ student.education_Qualification }}</td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+

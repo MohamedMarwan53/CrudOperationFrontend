@@ -1,0 +1,12 @@
+/* Set global margins in styles.css */
+body {
+    margin: 20px; /* Adjust margin to your preference */
+    padding: 0; /* Avoid default padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  /* Optionally, use a class to set margins for a specific component or section */
+  .page-margin {
+    margin: 20px; /* Example of a margin applied to a wrapping container */
+  }
+  

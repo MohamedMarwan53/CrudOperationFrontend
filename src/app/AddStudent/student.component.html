@@ -1,0 +1,44 @@
+<div class="container">
+<div>
+    <h2 class="text-uppercase font border border-4" > EMPLOYEE SIGN-UP PAGE</h2>
+<div>
+  <form class="col-md-4" [formGroup]="studentForm1" (ngSubmit)="addStudent()">
+ 
+    <div class="mb-3">
+      <label class="form-label"for="rollno">Roll Number:</label>
+      <input type="number" class="form-control" id="rollno" placeholder="Enter rollno here.." formControlName="rollno" />
+      <div *ngIf="studentForm1.get('rollno')?.invalid && studentForm1.get('rollno')?.touched">
+        <small *ngIf="studentForm1.get('rollno')?.hasError('required')">Roll number is required.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="name">Name:</label>
+      <input type="text" class="form-control"  id="name" placeholder="Enter name here.." formControlName="name" />
+      <div *ngIf="studentForm1.get('name')?.invalid && studentForm1.get('name')?.touched">
+        <small *ngIf="studentForm1.get('name')?.hasError('required')">Name is required.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="education_Qualification">Education Qualification:</label>
+      <input type="text" class="form-control" id="education_Qualification" placeholder="Enter education_qualification here.." formControlName="education_Qualification" />
+      <div *ngIf="studentForm1.get('education_Qualification')?.invalid && studentForm1.get('education_Qualification')?.touched">
+        <small *ngIf="studentForm1.get('education_Qualification')?.hasError('required')">Education qualification is required.</small>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="age">Age:</label>
+      <input type="number" class="form-control" id="age" formControlName="age" placeholder="Enter age here.." type="number" />
+      <div *ngIf="studentForm1.get('age')?.invalid && studentForm1.get('age')?.touched">
+        <small *ngIf="studentForm1.get('age')?.hasError('required')">Age is required.</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="studentForm1.invalid">
+      
+      Add Student
+    </button>
+
+  </form>
+ </div>
+</div>
+</div>
+

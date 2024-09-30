@@ -1,0 +1,27 @@
+
+.container{
+    background-image: url('/assets/img3.jpg'); 
+    background-size: contain;
+    position: relative;
+    width:10000px;
+    max-height: max-content;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px    ; 
+
+
+}
+.font{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:black;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 5px;
+}
+/* .rfont{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size:medium;
+    text-align: center;
+} */
